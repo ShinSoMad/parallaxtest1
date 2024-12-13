@@ -1,1 +1,91 @@
 
+<! -- 
+{% extends "base.html" %}
+
+{% block content %}
+-->
+
+<link rel="stylesheet" href="style.css">
+<script defer src="s.js"></script>
+
+
+
+<body>
+
+  <header>
+    <h1 class="name">{{ username }}</h1>
+    <div class="avatar"><img src="imgs/aaa.png"></div>
+  </header>
+
+  <div class="balanceMain">
+    <div class="balanceText"><p>Balance</p></div>
+    <div class="balanceNum"><p>{{ balance }}</p></div>
+  </div>
+
+  <div class="balance">Баланс: <span id="balance">{{ balance }}</span> монет</div>
+
+  <form method="POST" action="{% url 'user_press_button' %}">
+    {% csrf_token %}
+    <button class="circle" name="farm_the_coin">{{ button }}</button>
+  </form>
+
+
+
+</body>
+
+
+
+
+
+
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const button = document.querySelector('button[name="farm_the_coin"]');
+
+    function isTimeFormat(text) {
+      return /^\d+:\d{2}:\d{2}$/.test(text); // Checks H:MM:SS format
+    }
+
+    function startCountdown(button) {
+      const parts = button.textContent.split(':').map(Number);
+      let hours = parts[0], minutes = parts[1], seconds = parts[2];
+
+      function updateButton() {
+        if (hours === 0 && minutes === 0 && seconds === 0) {
+          button.textContent = "Зафарми монету";
+          clearInterval(timer);
+          return;
+        }
+
+        // Decrement time
+        if (seconds > 0) {
+          seconds--;
+        } else if (minutes > 0) {
+          seconds = 59;
+          minutes--;
+        } else if (hours > 0) {
+          seconds = 59;
+          minutes = 59;
+          hours--;
+        }
+
+        button.textContent = `${hours}:${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
+      }
+
+      const timer = setInterval(updateButton, 1000);
+      updateButton();
+    }
+
+    if (button.textContent !== "Зафарми монету") {
+      if (isTimeFormat(button.textContent)) {
+        startCountdown(button);
+      } else {
+        button.textContent = "2:59:30"; // Set to initial time
+        startCountdown(button);
+      }
+    }
+  });
+</script>
+
+{% endblock %}
