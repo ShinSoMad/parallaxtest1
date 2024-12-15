@@ -1,4 +1,5 @@
 body{
+    overflow: hidden;
     background-color: black;
     position: relative;
     color: white;
@@ -8,6 +9,7 @@ body{
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 .main{
+    overflow: hidden;
     width: 90%;
     height: max-content;
     margin: auto;
@@ -66,7 +68,7 @@ header{
     border-bottom: 1px white solid;
 }
 .farm_but{
-    padding-top: 10vh;
+    padding-top: 5vh;
     height: 40vh;
     width: 100%;
     margin: auto;
@@ -103,6 +105,7 @@ header{
     text-align: center;
 }
 .futor{
+    padding-top: 5%;
     width: 100%;    
     height: 15vh;
     position: relative;
