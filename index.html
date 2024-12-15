@@ -5,12 +5,14 @@
 -->
 
 <link rel="stylesheet" href="style.css">
-<script defer src="s.js"></script>
+
 
 
 
 <body>
   <div class="main">
+    <div class="main_inner_shadow_white"></div>
+    <div class="main_inner_shadow_yellow"></div>
     <header>
       <h1 class="name">{{ username }}</h1>
       <div class="avatar"><img src="imgs/aaa.png"></div>
@@ -35,12 +37,11 @@
    
   
     <div class="futor">
-      <div class="fut_shadow"></div>
       <ul>
-        <li><img src="imgs/pageOne.png" alt=""></li>
-        <li><img src="imgs/pageTwo.png" alt=""></li>
-        <li><img src="imgs/pageThre.png" alt=""></li>
-        <li><img src="imgs/pageFour.png" alt=""></li>
+        <li ><img onclick="foter(this)"  id="pageOne" class="page active" src="imgs/pageOne.png" alt=""></li>
+        <li ><img onclick="foter(this)"  id="pageTwo" class="page" src="imgs/pageTwo.png" alt=""></li>
+        <li ><img onclick="foter(this)"  id="pageThre" class="page" src="imgs/pageThre.png" alt=""></li>
+        <li ><img onclick="foter(this)"  id="pageFour" class="page" src="imgs/pageFour.png" alt=""></li>
       </ul>
     </div>
   </div>
@@ -56,7 +57,7 @@
   
  
   
-
+  <script src="s.js"></script>
 </body>
 
 
