@@ -55,7 +55,7 @@ header{
 .balanceText p{
     font-weight: 600;
     font-size: 50px;
-    border-bottom: 1px rgba(255, 255, 0, .8) solid;
+    border-bottom: 1px rgba(255, 255, 255, 0.8) solid;
     text-align: right;
 }
 .balanceNum{
@@ -65,7 +65,7 @@ header{
     font-weight: 600;
     text-align: left;
     font-size: 50px;
-    border-bottom: 1px rgba(255, 255, 0, .8) solid;
+    border-bottom: 1px rgba(255, 255, 255, 0.8) solid;
 }
 .farm_but{
     height: 40vh;
