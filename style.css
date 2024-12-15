@@ -9,11 +9,13 @@ body{
 }
 .main{
     width: 90%;
+    height: max-content;
     margin: auto;
 }
 header{
+    padding-top: 2vh;
     width: 100%;
-    height: 10%;
+    height: 10vh;
     margin: auto;
     display: flex;
     align-items: center;
@@ -35,13 +37,14 @@ header{
     cursor: pointer;
 }
 .balanceMain{
-    height: 10%;
-    padding-top: 5vh;
+    padding-top: 2vh;
+    height: 10vh;
     width: 100%;
     margin: auto;
     display: flex;
     justify-content: center;
     align-items: center;
+    padding-bottom: 5vh;
 }
 .balanceText{
     width: 40%;
@@ -63,19 +66,23 @@ header{
     border-bottom: 1px white solid;
 }
 .farm_but{
-    padding-top: 20%;
-    padding-bottom: 10%;
-    height: 50%;
+    padding-top: 10vh;
+    height: 40vh;
+    width: 100%;
     margin: auto;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    padding-bottom: 10vh;
+}
+.load{
+    padding-top: 10vh;
 }
 .farm_but_inner{
     cursor: pointer;
     width: 50%;
-    height: 50%;
+    height: 40vh;
     font-size: 50px;
     border-radius: 50px;
     background-color: yellow;
@@ -84,7 +91,6 @@ header{
 }
 
 .circle{
-    padding-top: 15%;
     font-weight: 500;
     letter-spacing: 1vw;
     margin: auto;
@@ -98,14 +104,14 @@ header{
 }
 .futor{
     width: 100%;    
-    height: 25%;
+    height: 15vh;
     position: relative;
 }
 .fut_shadow{
     opacity: .3;
     position: absolute;
     width: 100%;
-    height:10vh;
+    height:15vh;
     background: rgb(255,255,255);
     background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(0,0,0,1) 100%);
 }
