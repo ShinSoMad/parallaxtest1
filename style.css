@@ -1,4 +1,5 @@
 body{
+    position: relative;
     overflow: hidden;
     background-color: black;
     position: relative;
@@ -11,11 +12,11 @@ body{
 .main{
     overflow: hidden;
     width: 90%;
-    height: max-content;
+    height: 100vh;
     margin: auto;
 }
 header{
-    padding-top: 2vh;
+    padding-top: 3vh;
     width: 100%;
     height: 10vh;
     margin: auto;
@@ -39,14 +40,13 @@ header{
     cursor: pointer;
 }
 .balanceMain{
-    padding-top: 2vh;
+    padding-top: 3vh;
     height: 10vh;
     width: 100%;
     margin: auto;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-bottom: 5vh;
 }
 .balanceText{
     width: 40%;
@@ -68,7 +68,6 @@ header{
     border-bottom: 1px white solid;
 }
 .farm_but{
-    padding-top: 5vh;
     height: 40vh;
     width: 100%;
     margin: auto;
@@ -76,20 +75,24 @@ header{
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    padding-bottom: 10vh;
 }
 .load{
-    padding-top: 10vh;
+    height: 10vh;
+    padding-top: 2vh;
+    padding-bottom: 12vh;
 }
 .farm_but_inner{
     cursor: pointer;
-    width: 50%;
-    height: 40vh;
+    width: 550px;
+    height: 550px;
     font-size: 50px;
-    border-radius: 50px;
-    background-color: yellow;
+    border-radius: 50%;
+    background-image: url(imgs/midle.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: black;
     opacity: .7;
-    animation: 5s rotate infinite linear;
+    animation: 20s rotate infinite linear;
 }
 
 .circle{
@@ -105,16 +108,15 @@ header{
     text-align: center;
 }
 .futor{
-    padding-top: 5%;
     width: 100%;    
-    height: 15vh;
+    height: 10vh;
     position: relative;
 }
 .fut_shadow{
     opacity: .3;
     position: absolute;
     width: 100%;
-    height:15vh;
+    height:10vh;
     background: rgb(255,255,255);
     background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(0,0,0,1) 100%);
 }
@@ -135,9 +137,11 @@ li img{
     width: 50%;
 }
 .loading_line{
-    border-bottom: solid 1px yellow;
+    height: 1px;
+    background: linear-gradient(90deg, rgba(255,255,0,.1) 0%, rgba(255,255,0,1) 50%, rgba(255,255,0,0.1) 100%);
     width: 100%;
     margin: auto;
+    animation: loading 18s infinite linear;
 }
 @keyframes rotate {
     from {
@@ -146,5 +150,13 @@ li img{
   
     to {
       transform: rotate(360deg);
+    }
+  }
+  @keyframes loading {
+    from {
+      width: 0%;
+    }
+    to {
+      width: 100%;
     }
   }
