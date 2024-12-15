@@ -22,7 +22,7 @@ header{
     align-self: flex-end;
 }
 .avatar{
-    width: 15%;
+    width: 100%;
 }
 .avatar img{
     width: 50px;
