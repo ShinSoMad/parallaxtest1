@@ -10,30 +10,32 @@
 
 
 <body>
+  <div class="main">
+    <header>
+      <h1 class="name">{{ username }}</h1>
+      <div class="avatar"><img src="aaa.png"></div>
+    </header>
+  
+    <div class="balanceMain">
+      <div class="balanceText"><p>Balance:</p></div>
+      <div class="balanceNum"><p>{{ balance }}</p></div>
+    </div>
+  
+    <div class="farm_but">
+      <button class="farm_but_inner">tap to farm</button>
 
-  <header>
-    <h1 class="name">{{ username }}</h1>
-    <div class="avatar"><img src="aaa.png"></div>
-  </header>
-
-  <div class="balanceMain">
-    <div class="balanceText"><p>Balance:</p></div>
-    <div class="balanceNum"><p>{{ balance }}</p></div>
+      <div>
+        <button class="circle" name="farm_the_coin">{{ button }}</button>
+        <div class="loading_line"></div>
+      </div>
+      
+    </div>
+    
+   
+  
+    
   </div>
-
-  <div class="farm_but">
-    <button>tap to farm)))</button>
-  </div>
-  <button class="circle" name="farm_the_coin">{{ button }}</button>
-
-  <div class="futor">
-    <ul>
-      <li>1</li>
-      <li>2</li>
-      <li>3</li>
-      <li>4</li>
-    </ul>
-  </div>
+  
 
 
   <!-- <div class="balance">Баланс: <span id="balance">{{ balance }}</span> монет</div>-->
@@ -43,10 +45,19 @@
     
   </form> -->
   
-
-
+  <div class="futor">
+    <div class="fut_shadow"></div>
+    <ul>
+      <li><img src="imgs/pageOne.png" alt=""></li>
+      <li><img src="imgs/pageTwo.png" alt=""></li>
+      <li><img src="imgs/pageThre.png" alt=""></li>
+      <li><img src="imgs/pageFour.png" alt=""></li>
+    </ul>
+  </div>
+  
 
 </body>
+
 
 
 
