@@ -146,15 +146,15 @@ ul{
 li{
     list-style: none;
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
     padding-left: 5%;
     padding-right: 5%;
     cursor: pointer;
 }
 .page{
     width: 70%;
-    transition: .5s ease;
+    transition:.5s ease-out;
 }
 .loading_line{
     opacity: .8;
