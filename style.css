@@ -22,10 +22,10 @@ header{
     align-self: flex-end;
 }
 .avatar{
-    width: 100%;
+    width: 15%;
 }
 .avatar img{
-    width: 50px;
+    width: 100%;
     cursor: pointer;
 }
 .balanceMain{
