@@ -1,0 +1,65 @@
+<!--
+    {% extends "base.html" %}
+
+    {% block content %}
+-->
+
+<link rel="stylesheet" href="style.css">
+<body>
+    <div class="tasksMain">
+        <div class="main_inner_shadow_white"></div>
+        <div class="main_inner_shadow_yellow"></div>
+
+        <header>
+            <h1 class="name">{{ username }}</h1>
+            <div class="avatar"><img src="imgs/aaa.png"></div>
+        </header>
+
+        <div class="tasks_main_inner">
+
+        </div>
+
+        <div class="futor">
+            <li ><img onclick="foter(this)"  id="pageOne" class="page" src="imgs/pageOne.png" alt=""></li>
+            <li ><img onclick="foter(this)"  id="pageTwo" class="page" src="imgs/pageTwo.png" alt=""></li>
+            <li ><img onclick="foter(this)"  id="pageThre" class="page" src="imgs/pageThre.png" alt=""></li>
+            <li ><img onclick="foter(this)"  id="pageFour" class="page" src="imgs/pageFour.png" alt=""></li>
+            <li ><img onclick="foter(this)"  id="pageFive" class="page" src="imgs/pageFive.png" alt=""></li>
+        </div>
+        <div class="line222"></div>
+    </div>
+    <script src="s.js"></script>
+</body>
+<!--
+    <ul>
+        {% for task in tasks %}
+            <li>
+                <h3>{{ task.title }}</h3>
+                <p>{{ task.discription }}</p>
+                <p><strong>Reward:</strong> {{ task.reward }} tokens</p>
+                {% if task.task_status == 0 %}
+                    <p style="color: red;">Status: Pending</p>
+                    <form action="{% url 'check_task_status' %}" method="post">
+                        {% csrf_token %}
+                        <input type="hidden" name="task_title" value="{{ task.title }}">
+                        <input type="hidden" name="telegram_id" value="{{ task.client_telegram_id }}">
+                        <button type="submit">Check Completion</button>
+                    </form>
+                {% elif task.task_status == 1 %}
+                    <p style="color: orange;">Status: In progress</p>
+                    <form action="{% url 'check_task_status' %}" method="post">
+                        {% csrf_token %}
+                        <input type="hidden" name="task_title" value="{{ task.title }}">
+                        <input type="hidden" name="telegram_id" value="{{ task.client_telegram_id }}">
+                        <button type="submit">Check Completion</button>
+                    </form>
+                {% else %}
+                    <p style="color: green;">Status: Complete</p>
+                {% endif %}
+                
+            </li>
+        {% endfor %}
+    </ul>
+    -->
+
+{% endblock %}

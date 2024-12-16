@@ -1,0 +1,77 @@
+<!--
+{% extends "base.html" %}
+
+{% block content %}
+-->
+<link rel="stylesheet" href="style.css">
+<body>
+
+    <div class="main_wallet">
+        <div class="main_wallet_inner">
+            <div class="main_inner_shadow_white"></div>
+        <div class="main_inner_shadow_yellow"></div>
+
+        <header>
+            <h1 class="name">{{ username }}</h1>
+            <div class="avatar"><img src="imgs/aaa.png"></div>
+        </header>
+
+        <div class="tasks_main_inner">
+
+        </div>
+
+        <div class="futor">
+            <li ><img onclick="foter(this)"  id="pageOne" class="page" src="imgs/pageOne.png" alt=""></li>
+            <li ><img onclick="foter(this)"  id="pageTwo" class="page" src="imgs/pageTwo.png" alt=""></li>
+            <li ><img onclick="foter(this)"  id="pageThre" class="page" src="imgs/pageThre.png" alt=""></li>
+            <li ><img onclick="foter(this)"  id="pageFour" class="page" src="imgs/pageFour.png" alt=""></li>
+            <li ><img onclick="foter(this)"  id="pageFive" class="page" src="imgs/pageFive.png" alt=""></li>
+        </div>
+        <div class="line222"></div>
+        </div>
+        </div>
+   
+    <script src="s.js"></script>
+</body>
+
+<!--
+     <h1>Подключение к TON Wallet</h1>
+
+    <!- Место для кнопки подключения ->
+    <div id="connect-button-root" style="width: fit-content; margin-bottom: 20px;"></div>
+
+    <!-- Сообщение о статусе подключения ->
+    <p id="status-message">Подключите ваш кошелек TON.</p>
+
+    <!-- Подключаем TON Connect UI ->
+    <script src="https://cdn.jsdelivr.net/npm/@tonconnect/ui@latest/dist/tonconnect-ui.min.js"></script>
+-->
+
+<script>
+    try {
+        // Инициализация кнопки подключения с использованием библиотеки TON Connect UI
+        const tonConnectUI = new TON_CONNECT_UI.TonConnectUI({
+            manifestUrl: 'https://185-70-196-121.pl-waw1.upcloud.host/json',
+            buttonRootId: 'connect-button-root',  // Место, где будет кнопка
+        });
+        
+        // №№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№
+        // Тут даем запрос на наш же сайт на функцию в web_pages/views.py:15 
+
+        // Обработка изменения статуса подключения
+        tonConnectUI.onStatusChange((walletInfo) => {
+            const statusMessage = document.getElementById('status-message');
+            if (walletInfo) {
+                statusMessage.innerText = `Кошелек подключен: ${walletInfo.account.address}`;
+            } else {
+                statusMessage.innerText = 'Кошелек отключен.';
+            }
+        });
+    } catch (error) {
+        console.error("Ошибка при подключении к TON Connect UI:", error);
+    }
+</script>
+<!--
+{% endblock %}
+-->
+
