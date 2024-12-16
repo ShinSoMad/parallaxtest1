@@ -205,7 +205,6 @@ li{
     overflow: hidden;
 }
 .points{
-    scrollbar-width: 10px;
     padding-top: 5vh;
     width: 100%;
     display: flex;
@@ -213,8 +212,10 @@ li{
     align-items: center;
     justify-content: center;
     row-gap: 2vh;
+    scroll-snap-type: y mandatory;
 }
 .task_point{
+    scroll-snap-align: start;
     color: white;
     width: 90%;
     height: 24vh;
