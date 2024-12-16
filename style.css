@@ -123,7 +123,7 @@ header{
 .main_inner_shadow_white{
     overflow: hidden;
     opacity: .4;
-    top: 85vh;
+    top: 86vh;
     left: 0;
     margin: auto;
     height: 20vh;
@@ -134,7 +134,7 @@ header{
 .main_inner_shadow_yellow{
     overflow:hidden;
     opacity: .1;
-    top: 85vh;
+    top: 86vh;
     left: 0;
     margin: auto;
     height: 20vh;
@@ -202,6 +202,31 @@ li{
 .tasks_main_inner{
     width: 100%;
     height: 73vh;
+    overflow: hidden;
+}
+.points{
+    scrollbar-width: 10px;
+    padding-top: 5vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 2vh;
+}
+.task_point{
+    color: white;
+    width: 90%;
+    height: 24vh;
+    border-radius: 15px;
+    box-shadow: 10px 10px 12px 0px rgba(255, 255, 0, 0.4);
+    background: linear-gradient(0deg, rgba(255,255,255,.4) 0%, rgba(0,0,0,1) 100%);
+    border: none;
+}
+.task_point_inner{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
 }
 .main_referal{
     width: 90%;
