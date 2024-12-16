@@ -198,11 +198,13 @@ li{
     height: 100vh;
     color: white;
     background-color: black;
+    scroll-snap-type: y mandatory;
 }
 .tasks_main_inner{
     width: 100%;
     height: 73vh;
     overflow: hidden;
+    scroll-snap-type: y mandatory;
 }
 .points{
     padding-top: 5vh;
