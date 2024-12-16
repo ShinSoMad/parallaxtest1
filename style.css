@@ -166,6 +166,7 @@ li{
 .active{
     width:70%;
     padding-bottom: 2vh;
+    transition:.3s ease-out;
 }
 @keyframes rotate {
     from {

@@ -6,12 +6,13 @@ const pageFive = document.getElementById("pageFive")
 
 function foter(div){
     if(div == pageOne){
+        document.location.href = "farm_page.html"
         pageOne.classList.add("active")
         pageThre.classList.remove("active")
         pageFour.classList.remove("active")
         pageTwo.classList.remove("active")
         pageFive.classList.remove("active")
-        document.location.href = "farm_page.html"
+        pageOne.style.transition = "1" + "s"
     }else if(div == pageTwo){
         pageOne.classList.remove("active")
         pageThre.classList.remove("active")
