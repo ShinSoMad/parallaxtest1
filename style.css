@@ -253,9 +253,12 @@ li{
 .task_point_inner span{
     font-weight: 700;
 }
-.task_inner_but button{
+.task_inner_but button span{
     text-align: center;
     color: black;
+}
+.task_inner_but button{
+    text-decoration: none;
     box-shadow: 2px 2px 12px 0px rgba(255, 255, 0, 0.4);
     font-weight: 600;
     font-size: 20px;
