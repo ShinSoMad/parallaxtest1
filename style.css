@@ -254,6 +254,8 @@ li{
     font-weight: 700;
 }
 .task_inner_but button{
+    text-align: center;
+    color: black;
     box-shadow: 2px 2px 12px 0px rgba(255, 255, 0, 0.4);
     font-weight: 600;
     font-size: 20px;
