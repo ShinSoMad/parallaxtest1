@@ -205,6 +205,7 @@ li{
     overflow: hidden;
 }
 .points{
+    position: relative;
     padding-top: 5vh;
     width: 100%;
     display: flex;
@@ -225,9 +226,41 @@ li{
     border: none;
 }
 .task_point_inner{
-    width: 100%;
+    width: 90%;
+    margin: auto;
+    display: grid;
+    row-gap: 0px;
+    grid-template-columns: 1fr;
+    grid-template-rows: .1fr 1fr .1fr;
+}
+.task_point_inner h3{
+    font-size: 36px;
+    font-weight: 600;
+}
+.task_inner_text p{
+    font-size: 28px;
+    font-weight: 600;
+}
+.task_inner_but{
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.task_inner_but p{
+    font-size: 28px;
+    font-weight: 600;
+}
+.task_point_inner span{
+    font-weight: 700;
+}
+.task_inner_but button{
+    box-shadow: 2px 2px 12px 0px rgba(255, 255, 0, 0.4);
+    font-weight: 600;
+    font-size: 20px;
+    width: 30%;
+    height: 3vh;
+    border-radius: 25px;
+    border: none;
 }
 .main_referal{
     width: 90%;
